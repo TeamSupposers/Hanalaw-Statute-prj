@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="map" style="width:500px;height:400px;"></div>	    
+</body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3db11236cce31fb87bf637dce42ea149&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3db11236cce31fb87bf637dce42ea149"></script>
+<script>    
+    navigator.geolocation.getCurrentPosition(function(pos) {
+        var latitude = pos.coords.latitude.toFixed(6);
+        var longitude = pos.coords.longitude.toFixed(6);
+
+        var container = document.getElementById('map');
+        var options = {        
+            center: new kakao.maps.LatLng(latitude, longitude),
+            level: 4
+        };
+    
+        var map = new kakao.maps.Map(container, options);
+        map.setLevel(4);                      // 1: 20m, 2: 30m, 3: 50m, 4: 100m, 5: 250m, 6: 500m
+        var bounds = map.getBounds();
+        var NECorner = bounds.getNorthEast(); // 지도의 북동쪽 모서리 좌표
+        var SWCorner = bounds.getSouthWest(); // 지도의 남서쪽 모서리 좌표
+
+        // 좌표 값 확인 테스트용
+        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+            var latlng = mouseEvent.latLng;
+            alert('click! ' + latlng.toString());
+        });
+    });
+</script>
+</html>
