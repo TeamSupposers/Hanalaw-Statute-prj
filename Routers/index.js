@@ -1,6 +1,4 @@
 import express from 'express';
-
-import locationRouter from './v1/location.js';
 import reviewRouter from './v1/review.js';
 
 const apiRouter = express.Router();
