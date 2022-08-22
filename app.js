@@ -10,7 +10,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.set('view engine', 'ejs');
 app.use('/', apiRouter);
 
-app.listen(4000, () => logger.info('Server listening on port 4000'));
+app.listen(3003, () => logger.info('Server listening on port 4000'));
 
 /* ▼ 2022-05-11 공통 에러 처리 by 정민교 ▼ */
 process.on('uncaughtException', (err) => {
