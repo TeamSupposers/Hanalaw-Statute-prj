@@ -1,8 +1,8 @@
 import express from 'express';
-import reviewRouter from './v1/review.js';
+import statuteRouter from './v1/statute.js';
 
 const apiRouter = express.Router();
 
-apiRouter.use('/v1/review', reviewRouter);
+apiRouter.use('/api/v1/statute', statuteRouter);
 
 export default apiRouter;
