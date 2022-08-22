@@ -2,7 +2,7 @@ import Statute from '../database/mysql/models/statute.js';
 import request from 'request';
 
 const getTestLaw = async () => {	
-	const testUrl = 'http://www.law.go.kr/DRF/lawSearch.do?OC=test&target=oldAndNew&type=HTML&query=자동차관리법';
+	const testUrl = 'http://www.law.go.kr/DRF/lawSearch.do?OC=test&target=oldAndNew&type=HTML&query='+encodeURI('자동차관리법');
 	const options = {
 		url : 'http://www.law.go.kr/DRF/lawSearch.do?OC=test&target=oldAndNew&type=HTML&query=자동차관리법',		
 	}
