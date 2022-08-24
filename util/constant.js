@@ -21,6 +21,18 @@ const constant = {
 		SERVICE_UNAVAILABLE: 503,	// Service Unavailable
 		GATEWAY_TIMEOUT: 504,	 	// Gateway Timeout
 	}),
+	LAW_AMEND_TYPE: Object.freeze({
+		ENACT: 300201,				// 제정
+		PART_REVISION: 300202,		// 일부개정
+		ALL_REVISION: 300203,		// 전부개정
+		ABOLISH: 300204,			// 폐지
+		ABOLISH_ENACT: 300205,		// 폐지제정
+		BATCH_REVISION: 300206,		// 일괄개정
+		BATCH_ABOLISH: 300207,		// 일괄폐지
+		OTHER_LAW_REVISION: 300209, // 타법개정
+		OTHER_LAW_ABOLISH: 300210,	// 타법폐지
+		ETC: 300208,				// 기타
+	}),
 };
 
 export default constant;
