@@ -1,10 +1,10 @@
 import errors from '../models/core/errors.js';
 import StatuteService from '../service/statuteService.js';
 
-const getTestLaw = async (req) => {	
-	const resultStatute = await StatuteService.getTestLaw();
+const getMainFeed = async (req) => {	
+	const rstMainFeed = await StatuteService.getMainFeed();
 
-	return resultStatute;
+	return rstMainFeed;
 }
 
 // const createReviewByPcRoomId = async (req) => {
@@ -63,7 +63,7 @@ const getTestLaw = async (req) => {
 // };
 
 export default {
-	getTestLaw
+	getMainFeed
 	// createReviewByPcRoomId,
 	// getReviewsByPcRoomId,
 	// getReviewById,

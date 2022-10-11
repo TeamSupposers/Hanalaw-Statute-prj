@@ -10,6 +10,6 @@ const reviewRouter = express.Router();
 // reviewRouter.put('/:id', wrapper.asyncWrapper(reviewController.updateReviewById));
 // reviewRouter.delete('/:id', wrapper.asyncWrapper(reviewController.deleteReviewById));
 
-reviewRouter.get('/test', wrapper.asyncWrapper(statuteController.getTestLaw));
+reviewRouter.get('/mainFeed', wrapper.asyncWrapper(statuteController.getMainFeed));
 
 export default reviewRouter;
